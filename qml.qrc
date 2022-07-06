@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file>TopBar.qml</file>
+        <file>deckedit.qml</file>
+        <file>reviewscreen.qml</file>
+        <file>previewscreen.qml</file>
+        <file>homescreen.qml</file>
+        <file>deckscreen.qml</file>
+        <file>CardListView.qml</file>
+        <file>DeckTableView2.qml</file>
+        <file>DeckTableView.qml</file>
+        <file>main.qml</file>
+    </qresource>
+</RCC>
