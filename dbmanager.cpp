@@ -85,6 +85,11 @@ void dbmanager::set_cardinfo(int row_index)
 
 QString dbmanager::allTableQuery(QString state)
 {
+    if(!m_tables.size())
+    {
+        return "";
+    }
+
     QString querystring = "SELECT deckname, id, Question, Answer FROM " + m_tables.at(0) + " WHERE card_state = \"" + state + "\"";
     int num_tables = m_tables.length();
 
@@ -98,12 +103,37 @@ QString dbmanager::allTableQuery(QString state)
 
 QString dbmanager::allTableQuery()
 {
+    if(!m_tables.size())
+    {
+        return "";
+    }
+
     QString querystring = "SELECT deckname, id, Question, Answer FROM " + m_tables.at(0);
     int num_tables = m_tables.length();
 
     for(int i = 1; i < num_tables; i++)
     {
         querystring += " UNION ALL SELECT deckname, id, Question, Answer FROM " + m_tables.at(i);
+    }
+
+    return querystring;
+}
+
+QString dbmanager::allTableTodayQuery()
+{
+    if(!m_tables.size())
+    {
+        return "";
+    }
+
+    QString today_date = m_today.toString(m_time_format);
+
+    QString querystring = "SELECT deckname, id, Question, Answer FROM " + m_tables.at(0) + " WHERE review_date = " + "'" + today_date + "'";
+    int num_tables = m_tables.length();
+
+    for(int i = 1; i < num_tables; i++)
+    {
+        querystring += " UNION ALL SELECT deckname, id, Question, Answer FROM " + m_tables.at(i) + " WHERE review_date = " + "'" + today_date + "'";
     }
 
     return querystring;
@@ -608,4 +638,3 @@ void dbmanager::setCardType(QString str)
 {
     m_card_type = str;
 }
-

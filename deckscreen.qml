@@ -61,7 +61,7 @@ Item {
 
         Rectangle {
             id: due_today
-            color: today_mouse_area.containsMouse? "#A7C2D9" : "#E6F4F4"
+            color: state_view.selectedState === "due_today" ? "#91B9DA" : (today_mouse_area.containsMouse? "#A7C2D9" : "#E6F4F4")
             height: m_model.getBorderWidth() * 1.5
             width: parent.width - m_model.getBorderWidth() * 2
             anchors {
@@ -83,7 +83,11 @@ Item {
                 cursorShape: Qt.PointingHandCursor
 
                 onClicked: {
+                    m_model.callSql(dbmanager.allTableTodayQuery())
                     tableLoader.source = "DeckTableView2.qml"
+
+                    decklist.selectedIndex = -2
+                    state_view.selectedState = "due_today"
                 }
             }
         }
@@ -164,6 +168,7 @@ Item {
                     rightMargin: m_model.getBorderWidth()
                 }
 
+                property string selectedState : ""
                 ListView {
                     anchors.fill: parent
                     clip: true
@@ -179,7 +184,7 @@ Item {
                     delegate: Rectangle {
                         height: m_model.getBorderWidth() * 1.5
                         width: deckbar.width
-                        color: stateview_mouse_area.containsMouse? "#A7C2D9" : "#E6F4F4"
+                        color: state_view.selectedState === name ? "#91B9DA"  : (stateview_mouse_area.containsMouse? "#A7C2D9" : "#E6F4F4")
                         Text {
                             anchors.fill: parent
                             font.pixelSize: m_model.getBorderWidth() * 0.8
@@ -195,6 +200,8 @@ Item {
                             onClicked: {
                                 tableLoader.source = "DeckTableView2.qml"
                                 m_model.callSql(dbmanager.allTableQuery(name))
+                                decklist.selectedIndex = -2
+                                state_view.selectedState = name
                             }
                         }
                     }
@@ -263,6 +270,7 @@ Item {
 
                     onClicked: {
                         decklist.selectedIndex = -1
+                        state_view.selectedState = ""
                         tableLoader.source = "DeckTableView2.qml"
                         m_model.callSql(dbmanager.allTableQuery())
                         dbmanager.set_selected_table("")
@@ -308,6 +316,7 @@ Item {
 
                             onClicked: {
                                 decklist.selectedIndex = index
+                                state_view.selectedState = ""
                                 m_model.callSql("SELECT * FROM " + display)
                                 dbmanager.set_selected_table(display)
                                 tableLoader.source = "DeckTableView.qml"

@@ -29,6 +29,8 @@ public:
     Q_INVOKABLE QString allTableQuery(QString state);
     //with no constraints
     Q_INVOKABLE QString allTableQuery();
+    //omly cards with review dates due today
+    Q_INVOKABLE QString allTableTodayQuery();
 
     //Update row
     Q_INVOKABLE void updateFieldContent(QString deckname, QString card_id, QString field, QString new_content);
