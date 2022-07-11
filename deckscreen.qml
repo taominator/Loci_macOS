@@ -371,7 +371,7 @@ Item {
                 border.width: m_model.getBorderWidth() / 4
                 Text {
                     text: "Add"
-                    font.pixelSize: parent. height * (2/3)
+                    font.pixelSize: parent. height * (1/2)
                     anchors.centerIn: parent
                 }
                 MouseArea {
@@ -403,7 +403,7 @@ Item {
                 border.width: m_model.getBorderWidth() / 4
                 Text {
                     text: "Delete"
-                    font.pixelSize: parent. height * (2/3)
+                    font.pixelSize: parent. height * (1/2)
                     anchors.centerIn: parent
                 }
                 MouseArea {
@@ -435,7 +435,7 @@ Item {
                 border.width: m_model.getBorderWidth() / 4
                 Text {
                     text: "Reset"
-                    font.pixelSize: parent. height * (2/3)
+                    font.pixelSize: parent. height * (1/2)
                     anchors.centerIn: parent
                 }
                 MouseArea {
@@ -468,7 +468,7 @@ Item {
 
                 Text {
                     text: "Suspend"
-                    font.pixelSize: parent. height * (2/3)
+                    font.pixelSize: parent. height * (1/2)
                     anchors.centerIn: parent
                 }
                 MouseArea {
@@ -500,7 +500,7 @@ Item {
                 border.width: m_model.getBorderWidth() / 4
                 Text {
                     text: "Unsuspend"
-                    font.pixelSize: parent. height * (2/3)
+                    font.pixelSize: parent. height * (1/2)
                     anchors.centerIn: parent
                 }
                 MouseArea {

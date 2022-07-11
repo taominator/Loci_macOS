@@ -14,7 +14,7 @@ Rectangle {
     Rectangle {
         id: home_button
         clip: true
-        width: parent.width/6
+        width: parent.width/4
         anchors {
             left: parent.left
             top: parent.top
@@ -33,14 +33,14 @@ Rectangle {
         Text {
             text: "Home"
             anchors.centerIn: parent
-            font.pixelSize: m_model.getBorderWidth()
+            font.pixelSize: parent.height * (1/2)
         }
     }
 
     Rectangle {
         id: deck_button
         clip: true
-        width: parent.width/6
+        width: parent.width/4
         anchors {
             left: home_button.right
             top: parent.top
@@ -59,14 +59,14 @@ Rectangle {
         Text {
             text: "Browse"
             anchors.centerIn: parent
-            font.pixelSize: m_model.getBorderWidth()
+            font.pixelSize: parent.height * (1/2)
         }
     }
 
     Rectangle {
         id: preview_button
         clip: true
-        width: parent.width/6
+        width: parent.width/4
         anchors {
             left: deck_button.right
             top: parent.top
@@ -85,14 +85,14 @@ Rectangle {
         Text {
             text: "Preview Card"
             anchors.centerIn: parent
-            font.pixelSize: m_model.getBorderWidth()
+            font.pixelSize: parent.height * (1/2)
         }
     }
 
     Rectangle {
         id: edit_button
         clip: true
-        width: parent.width/6
+        width: parent.width/4
         anchors {
             left: preview_button.right
             top: parent.top
@@ -111,27 +111,7 @@ Rectangle {
         Text {
             text: "Edit decks"
             anchors.centerIn: parent
-            font.pixelSize: m_model.getBorderWidth()
+            font.pixelSize: parent.height * (1/2)
         }
     }
-
-    Rectangle {
-        id: search_button
-        clip: true
-        anchors {
-            left: edit_button.right
-            right: parent.right
-            top: parent.top
-            bottom: parent.bottom
-        }
-        color: "#838383"
-        //MouseArea {
-        //    anchors.fill: parent
-        //    cursorShape: Qt.PointingHandCursor
-        //    onClicked: {
-
-        //    }
-        //}
-    }
-
 }

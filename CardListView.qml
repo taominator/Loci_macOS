@@ -50,7 +50,7 @@ Item {
                     top: parent.top
                 }
                 padding: m_model.getBorderWidth() / 2
-                font.pixelSize: m_model.getBorderWidth() / 1
+                font.pixelSize: parent.height * (1/5)
                 text: "Field: " + field
             }
 
@@ -62,7 +62,7 @@ Item {
                     bottom: parent.bottom
                 }
                 padding: m_model.getBorderWidth() / 2
-                font.pixelSize: m_model.getBorderWidth() / 1
+                font.pixelSize: parent.height * (1/5)
                 text: content
                 placeholderText: qsTr("Enter field content here")
                 background: Rectangle {

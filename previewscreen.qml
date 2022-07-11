@@ -41,7 +41,7 @@ Item {
                         height: parent.height / 2
                         anchors.centerIn: parent
                         text: content
-                        font.pixelSize: parent.height * (1.5/3)
+                        font.pixelSize: parent.height * (1/3)
                     }
                 }
             }

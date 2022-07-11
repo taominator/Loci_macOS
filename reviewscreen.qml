@@ -73,7 +73,7 @@ Item {
                         //    top: parent.top
                         //}
                         text: content
-                        font.pixelSize: parent.height * (1.5/3)
+                        font.pixelSize: parent.height * (1/3)
                     }
                 }
             }

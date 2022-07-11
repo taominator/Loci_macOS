@@ -35,7 +35,7 @@ Item {
                 Text {
                     anchors.centerIn: parent
                     text: "Add / Delete Deck"
-                    font.pixelSize: parent.height * (1/2)
+                    font.pixelSize: parent.height * (1/3)
                 }
             }
 
@@ -61,7 +61,7 @@ Item {
                     Text {
                         anchors.centerIn: parent
                         text: "Deckname: "
-                        font.pixelSize: parent.height / 3
+                        font.pixelSize: parent.height * (1/4)
                     }
 
                 }
@@ -82,7 +82,7 @@ Item {
                             verticalCenter: parent.verticalCenter
                             left: parent.left
                         }
-                        font.pixelSize: parent.height / 3
+                        font.pixelSize: parent.height * (1/4)
                         placeholderText: qsTr("Enter deckname here")
                         background: Rectangle {
                             opacity: 0
@@ -114,7 +114,7 @@ Item {
                     Text {
                         anchors.centerIn: parent
                         text: "Add Deck"
-                        font.pixelSize: parent.height / 3
+                        font.pixelSize: parent.height / 4
                     }
                     MouseArea {
                         id: add_deck_area
@@ -140,7 +140,7 @@ Item {
                     Text {
                         anchors.centerIn: parent
                         text: "Delete Deck"
-                        font.pixelSize: parent.height / 3
+                        font.pixelSize: parent.height / 4
                     }
                     MouseArea {
                         id: delete_deck_area
@@ -180,7 +180,7 @@ Item {
                 Text {
                     anchors.centerIn: parent
                     text: "Add / Delete Field"
-                    font.pixelSize: parent.height * (1/2)
+                    font.pixelSize: parent.height * (1/3)
                 }
             }
 
@@ -206,7 +206,7 @@ Item {
                     Text {
                         anchors.centerIn: parent
                         text: "Fieldname: "
-                        font.pixelSize: parent.height / 3
+                        font.pixelSize: parent.height * (1/4)
                     }
 
                 }
@@ -227,7 +227,7 @@ Item {
                             verticalCenter: parent.verticalCenter
                             left: parent.left
                         }
-                        font.pixelSize: parent.height / 3
+                        font.pixelSize: parent.height * (1/4)
                         placeholderText: qsTr("Enter fieldname here")
                         background: Rectangle {
                             opacity: 0
@@ -259,7 +259,7 @@ Item {
                     Text {
                         anchors.centerIn: parent
                         text: "Deckname: "
-                        font.pixelSize: parent.height / 3
+                        font.pixelSize: parent.height * (1/4)
                     }
 
                 }
@@ -280,7 +280,7 @@ Item {
                             verticalCenter: parent.verticalCenter
                             left: parent.left
                         }
-                        font.pixelSize: parent.height / 3
+                        font.pixelSize: parent.height * (1/4)
                         placeholderText: qsTr("Enter deckname here")
                         background: Rectangle {
                             opacity: 0
@@ -311,7 +311,7 @@ Item {
                     Text {
                         anchors.centerIn: parent
                         text: "Add Field"
-                        font.pixelSize: parent.height / 3
+                        font.pixelSize: parent.height / 4
                     }
                     MouseArea {
                         id: add_field_area
@@ -337,7 +337,7 @@ Item {
                     Text {
                         anchors.centerIn: parent
                         text: "Delete field"
-                        font.pixelSize: parent.height / 3
+                        font.pixelSize: parent.height / 4
                     }
                     MouseArea {
                         id: delete_field_area

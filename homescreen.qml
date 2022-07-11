@@ -99,7 +99,7 @@ Item {
                     }
                     Text {
                         anchors.centerIn: parent
-                        font.pixelSize: parent.height * (1/2)
+                        font.pixelSize: parent.height * (1/3)
                         padding: m_model.getBorderWidth() * 0.2
                         text: "Deckname"
                     }
@@ -117,7 +117,7 @@ Item {
                     }
                     Text {
                         anchors.centerIn: parent
-                        font.pixelSize: parent.height * (1/2)
+                        font.pixelSize: parent.height * (1/3)
                         padding: m_model.getBorderWidth() * 0.2
                         text: "N"
                     }
@@ -135,7 +135,7 @@ Item {
                     }
                     Text {
                         anchors.centerIn: parent
-                        font.pixelSize: parent.height * (1/2)
+                        font.pixelSize: parent.height * (1/3)
                         padding: m_model.getBorderWidth() * 0.2
                         text: "R"
                     }
